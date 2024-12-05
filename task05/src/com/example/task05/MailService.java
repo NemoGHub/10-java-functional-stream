@@ -1,13 +1,12 @@
 package com.example.task05;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
 public class MailService<T> implements Consumer<MailUnit<T>> {
-    Map<String, List<T>> mailBox = new MailList<>();
+    private Map<String, List<T>> mailBox = new MailList<>();
 
     @Override
     public void accept(MailUnit<T> mailUnit){

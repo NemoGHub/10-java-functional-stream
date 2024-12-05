@@ -32,16 +32,12 @@ public class Task03Main {
             T min = max;
 
             while (streamIterator.hasNext()) {
-
                 T next = streamIterator.next();
-
                 if (order.compare(next, max) > 0) max = next;
                 else if (order.compare(next, min) < 0) min = next;
             }
             minMaxConsumer.accept(min, max);
         }
-    else minMaxConsumer.accept(null, null);
-
-
+        else minMaxConsumer.accept(null, null);
     }
 }
